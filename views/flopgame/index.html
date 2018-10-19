@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="http://jimu-activity-web.cdn.bcebos.com/flopgame10/logo.jpg" type="image/x-icon"/>
+    <link rel="stylesheet" href="/stylesheets/flopgame/index.css">
+    <script src="/javascripts/common/rem.js"></script>
+    <title>积目挑战翻牌游戏</title>
+</head>
+<body>
+    <div class="main">
+        <!-- <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/top.png" class="pictop" alt=""> -->
+        <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/textone.png" class="picone" alt="">
+        
+        <div id="video-wrap" class="video-wrap">
+            <div id="video-screen" class="video-screen">
+                <video class="video" poster="http://jimu-activity-web.cdn.bcebos.com/flopgame10/vedio1.png" src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/video1.mp4" x5-video-player-type="h5" x5-video-player-fullscreen="true" x-webkit-airplay="true" x5-playsinline="true" webkit-playsinline="true" playsinline="true"></video> 
+                <div class="loading hide"></div>
+            </div>
+            <div class="control foot-pannet" data-show="1">
+                <div class="oper-btn play"></div>
+                <div class="drag-wrap">
+                    <div class="drag-line progress-bar">
+                        <div class="drag-btn"></div>
+                        <div class="drag-line-bg play-progress-bar"></div>
+                    </div>
+                    <div class="video-time"><span class="current-time">00:00</span></div>
+                </div>
+                <div class="full-btn"></div>
+            </div>
+            <div id="screen-time-wrap" class="screen-time-wrap hide">
+                <span class="screen-currenttime">00:00:00</span>/<span class="screen-duration">00:00:00</span>
+            </div>
+        </div>
+
+        <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/texttwo.png"  class="pictwo" alt="">
+
+        <div id="video-wrap2" class="video-wrap">
+            <div id="video-screen" class="video-screen">
+                <video class="video" poster="http://jimu-activity-web.cdn.bcebos.com/flopgame10/vedio2.png" src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/video2.mp4" x5-video-player-type="h5" x5-video-player-fullscreen="true" x-webkit-airplay="true" x5-playsinline="true" webkit-playsinline="true" playsinline="true"></video>
+                <div id="loading" class="loading hide"></div>
+            </div>
+            <div id="control" class="foot-pannet control" data-show="1">
+                <div id="oper-btn" class="oper-btn play"></div>
+                <div class="drag-wrap">
+                    <div id="progress-bar" class="drag-line progress-bar">
+                        <div id="drag-btn" class="drag-btn"></div>
+                        <div id="play-progress-bar"  class="drag-line-bg play-progress-bar"></div>
+                    </div>
+                    <div class="video-time"><span id="current-time" class="current-time">00:00</span></div>
+                </div>
+                <div id="full-btn" class="full-btn"></div>
+            </div>
+            <div id="screen-time-wrap" class="screen-time-wrap hide">
+                <span id="screen-currenttime" class="screen-currenttime">00:00:00</span> /
+                <span id="screen-duration" class="screen-duration">00:00:00</span>
+            </div>
+        </div>
+
+        <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/textthree.png"  class="picthree" alt="">
+        <div class="gmucard">
+            <ul class="cardbox">
+                <li class="animate animate1">
+                    <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/gmucard.png">
+                </li>
+                <li class="animate animate2">
+                    <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/gmucard.png">
+                </li>
+                <li class="animate animate3">
+                    <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/gmucard.png">
+                </li>
+                <li class="animate animate4">
+                    <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/gmucard.png">
+                </li>
+                <li class="animate animate5">
+                    <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/gmucard.png">
+                </li>
+                <li class="animate67">
+                    <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/gmulogo.png" class="gmulogo">
+                </li>
+                <li class="animate animate8">
+                    <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/gmucard.png">
+                </li>
+                <li class="animate animate9">
+                    <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/gmucard.png">
+                </li>
+                <li class="animate animate10">
+                    <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/gmucard.png">
+                </li>
+                <li class="animate animate11">
+                    <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/gmucard.png">
+                </li>
+                <li class="animate animate12">
+                    <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/gmucard.png">
+                </li>
+            </ul>
+        </div>
+        <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/yourself.png"  class="picfour" alt="">
+        <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/information.png"  class="picfive" alt="">
+
+        <!-- 输入手机号 -->
+        <div id="phone">
+            <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/phone.png" class="input-phone" alt="">
+            <input type="text" id="telephone">
+            <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/sure.png" class="operation surephone" alt="">
+            <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/close.png" class="close" alt="">
+        </div>
+
+        <!--中奖提示-->
+        <div id="mask">
+            <img src="" class="picture" alt="">
+            <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/get.png" class="operation get" style="display:none" alt="">
+            <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/sure.png" class="operation sure" style="display:none" alt="">
+            <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/register.png" class="operation register" style="display:none" alt="">
+            <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/close.png" class="close" alt="">
+        </div>
+
+        <!-- 输入收货地址 -->
+        <div id="adress">
+            <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/adress.png" class="adressimg" alt="">
+            <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/sure.png" class="operation sureadress" alt="">
+            <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/close.png" class="close" alt="">
+
+            <input type="text" class="infor gmuname">
+            <input type="text" class="infor gmuphone">
+            <textarea name="" class="gmuadress" id="" cols="30" rows="10"></textarea>
+        </div>
+
+        <!-- 领取成功 -->
+        <div class="success" style="display:none">
+            <img src="http://jimu-activity-web.cdn.bcebos.com/flopgame10/true.jpg" class="true" alt="">
+            <p>领取成功</br>刘波会通知你哦</p>
+        </div>
+
+        <!-- <div style="display:none">
+            <script src="https://s22.cnzz.com/z_stat.php?id=1273925464&web_id=1273925464" language="JavaScript"></script>
+        </div> -->
+    </div>
+</body>
+
+<script src="/javascripts/common/zepto.min.js"></script>
+<script src="/javascripts/common/function.js"></script>
+<script src="/javascripts/common/TweenMax.min.js" type="text/javascript"></script>
+<script src="/javascripts/flopgame/videojs.js" type="text/javascript"></script>
+<script src="/javascripts/common/hammer.min.js"></script>
+<script src="/javascripts/flopgame/globals.js"></script>
+<script src="/javascripts/flopgame/index.js"></script>
+
+</html>

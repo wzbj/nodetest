@@ -1,0 +1,445 @@
+// out: index.css, compress:true, sourceMap:false
+@import url(/stylesheets/common/reset.css);
+.full(@w, @h, @bg) {
+    width: @w;
+    height: @h;
+    background: @bg;
+}
+.main,body,html {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+html {
+    font-size: 62.5%;
+    -webkit-overflow-scrolling: touch;
+}
+.main{
+    .full(100%,34.88rem,none);
+    background: url(http://jimu-activity-web.cdn.bcebos.com/flopgame10/background.png) no-repeat;
+    background-size: 100%;
+    display: -webkit-flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-align-items: center;
+    // .pictop{
+    //     width: 5.85rem;
+    //     margin-top: 3.8rem;
+    //     margin-bottom: 0.1rem;
+    // }
+    .picone{
+        width: 5.72rem;
+        margin-top: 3.8rem;
+        margin-bottom: 0.36rem;
+    }
+
+    .video-wrap{
+        .full(5.65rem,auto,#000);
+        overflow: hidden;
+        position: relative;
+        .hide{
+            display: none;
+        }
+        .video-screen{
+            .full(100%,100%,none);
+            video{
+                .full(100%,100%,none);
+            }
+            .loading{
+                .full(0.6rem,0.6rem,none);
+                position: absolute;
+                z-index: 2147483649;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                -webkit-transform: translate(-50%,-50%);
+                background: url(/images/flopgame/load.gif) no-repeat center;
+                background-size: 100% 100%;
+            }
+            /* 浏览器把全屏状态下的控制栏隐藏 */
+            // #video::-webkit-media-controls-enclosure{
+            //     display: none
+            // }
+        }
+        .foot-pannet{
+            width: 100%;
+            height: 0.6rem;
+            background-color: rgba(49, 49, 49, 0.7);
+            position: absolute;
+            z-index: 2147483648;
+            left: 0;
+            bottom: 0;
+            display: -webkit-flex;
+            justify-content: center;
+            -webkit-justify-content: center;
+            align-items: center;
+            -webkit-align-items: center;
+            .pause{
+                width: 0.28rem;
+                height: 0.3rem;
+                background-image: url("/images/flopgame/stop.png");
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .play{
+                width: 0.28rem;
+                height: 0.3rem;
+                background-image: url("/images/flopgame/start.png");
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .drag-wrap{
+                width: 81%;
+                height: 100%;
+                position: relative;
+                z-index: 1;
+                margin: 0 0.14rem;
+                .drag-line{
+                    width: 86%;
+                    height: 0.02rem;
+                    background: rgb(92, 92, 92);
+                    margin-top: 0.3rem;
+                    position: relative;
+                    .drag-btn{
+                        position: absolute;
+                        width: 0.18rem;
+                        height: 0.18rem;
+                        background: #fff;
+                        z-index: 1;
+                        border-radius: 50%;
+                        top: -0.09rem;
+                        left: 0;
+                    }
+                    .drag-line-bg{
+                        width: 0;
+                        height: 100%;
+                        background: #fff;
+                        position: absolute;
+                        z-index: 1;
+                        left: 0;
+                        top: 0;
+                    }
+                }
+                .video-time{
+                    width: auto;
+                    height: auto;
+                    position: absolute;
+                    z-index: 1;
+                    right: 0;
+                    bottom: 0.2rem;
+                    font-size: 0.2rem;
+                    color: white;
+                }
+            }
+            .full-btn{
+                width: 0.3rem;
+                height: 0.3rem;
+                background-image: url("/images/flopgame/full.png");
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .unfull-btn{
+                width: 0.3rem;
+                height: 0.3rem;
+                background-image: url("/images/flopgame/unfull.png");
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+        .screen-time-wrap{
+            width: 5rem;
+            height: 1rem;
+            // background-color: rgba(134, 134, 134, 0.616);
+            border-radius: 0.5rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            font-size: 0.2rem;
+            color: #000;
+            line-height: 1rem;
+            text-align: center;
+        }
+    }
+
+    .pictwo{
+        width: 5.28rem;
+        margin-top: 0.36rem;
+        margin-bottom: 0.36rem;
+    }
+    .picthree{
+        width: 5.52rem;
+    }
+    .gmucard{
+        .full(6rem,5.9rem,none);
+        .cardbox{
+            position: relative;
+            width: 100%;    
+            height: 100%;
+            li{
+                display: inline-block;
+                width: 1.15rem;
+                margin-left: 0.24rem;
+                margin-bottom: 0.28rem;
+                -o-transition: .3s;
+                -ms-transition: .3s;
+                -moz-transition: .3s;
+                -webkit-transition: .3s;
+                transition: .3s;
+                img{
+                    width: 100%;
+                }
+                &.animate67{
+                    width: 2.62rem;
+                    img{
+                        margin-bottom: 0.24rem;
+                    }
+                }
+                /*卡牌摆动动画*/
+                // &.active{
+                //     -o-animation: shaking .8s ease-in-out;
+                //     -ms-animation: shaking .8s ease-in-out;
+                //     -moz-animation: shaking .8s ease-in-out;
+                //     -webkit-animation: shaking .8s ease-in-out;
+                //     animation: shaking .8s ease-in-out;
+                // }
+                // @keyframes shaking{
+                //     0%,100%{
+                //         -o-transform: rotateY(0deg);
+                //         -ms-transform: rotateY(0deg);
+                //         -moz-transform: rotateY(0deg);
+                //         -webkit-transform: rotateY(0deg);
+                //         transform: rotateY(0deg);
+                //     }
+                //     33%{
+                //         -o-transform: rotateY(-60deg);
+                //         -ms-transform: rotateY(-60deg);
+                //         -moz-transform: rotateY(-60deg);
+                //         -webkit-transform: rotateY(-60deg);
+                //         transform: rotateY(-60deg);
+                //     }
+                //     66%{
+                //         -o-transform: rotateY(60deg);
+                //         -ms-transform: rotateY(60deg);
+                //         -moz-transform: rotateY(60deg);
+                //         -webkit-transform: rotateY(60deg);
+                //         transform: rotateY(60deg);
+                //     }
+                // }
+                /*卡牌翻开动画*/
+                &.open-card {
+                    left: 1rem !important;
+                    top: 0 !important;
+                    z-index: 999999;
+                    -o-transform: scale(1.5);
+                    -ms-transform: scale(1.5);
+                    -moz-transform: scale(1.5);
+                    -webkit-transform: scale(1.5);
+                    transform: scale(1.5);
+                    -o-animation: openCard .5s .5s linear forwards;
+                    -ms-animation: openCard .5s .5s linear forwards;
+                    -moz-animation: openCard .5s .5s linear forwards;
+                    -webkit-animation: openCard .5s .5s linear forwards;
+                    animation: openCard .5s .5s linear forwards;
+                }
+
+                @keyframes openCard{
+                    10%,30%,50%{
+                        -o-transform: scale(1.5) translateX(-10px);
+                        -ms-transform: scale(1.5) translateX(-10px);
+                        -moz-transform: scale(1.5) translateX(-10px);
+                        -webkit-transform: scale(1.5) translateX-(10px);
+                        transform: scale(1.5) translateX(-10px);
+                    }
+                    20%,40%,60%{
+                        -o-transform: scale(1.5) translateX(10px);
+                        -ms-transform: scale(1.5) translateX(10px);
+                        -moz-transform: scale(1.5) translateX(10px);
+                        -webkit-transform: scale(1.5) translateX(10px);
+                        transform: scale(1.5) translateX(10px);
+                    }
+                    100%{
+                        -o-transform: scale(1.5) translateX(90deg);
+                        -ms-transform: scale(1.5) translateX(90deg);
+                        -moz-transform: scale(1.5) translateX(90deg);
+                        -webkit-transform: scale(1.5) translateX(90deg);
+                        transform: scale(1.5) rotateY(90deg);
+                    }
+                }
+            }
+        }
+    }
+    .picfour{
+        width: 2.23rem;
+        margin-bottom: 0.68rem;
+    }
+    .picfive{
+        width: 5.45rem;
+    }
+    #phone{
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 999999;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        .input-phone{
+            width: 6rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #telephone{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-120%);
+            width: 2.8rem;
+            height: 0.56rem;
+            border: 0.02rem solid transparent;
+            background: transparent;
+            border-radius: 0.1rem;
+            outline: none;
+            font-size: 0.26rem;
+            color: #fff;
+        }
+        .operation{
+            width: 3rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,50%);
+        }
+        .close{
+            width: 0.44rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,800%);
+        }
+    }   
+    #mask{
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 999999;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        .picture{
+            width: 6rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .operation{
+            width: 3rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,50%);
+        }
+        .close{
+            width: 0.44rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,800%);
+        }
+    }
+    #adress{
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 999999;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        .adressimg{
+            width: 6rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .operation{
+            width: 3rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,68%);
+        }
+        .close{
+            width: 0.44rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,800%);
+        }
+        .infor{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-20%,-475%);
+            width: 1.78rem;
+            height: 0.4rem;
+            border: 0.01rem solid transparent;
+            background: transparent;
+            border-radius: 0.1rem;
+            outline: none;
+            font-size: 0.2rem;
+            color: #fff;
+            text-indent: 0.1rem;
+            &.gmuphone{
+                transform: translate(-20%,-345%);
+            }
+        }
+        .gmuadress{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-10%);
+            width: 2.86rem;
+            height: 1.26rem;
+            border: 0.01rem solid transparent;
+            background: transparent;
+            border-radius: 0.1rem;
+            outline: none;
+            font-size: 0.2rem;
+            color: #fff;
+            text-indent: 0.1rem;
+        }
+    }
+    .success{
+        .full(2.18rem,2.12rem,#585858);
+        border-radius: 0.16rem;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 999999;
+        opacity: 0.8;
+        .true{
+            width: 1.06rem;
+            display: block;
+            margin: 0.3rem auto;
+        }
+        p{
+            font-size: 0.22rem;
+            color: #fff;
+            text-align: center;
+            line-height: 0.34rem;
+        }
+    }
+}
